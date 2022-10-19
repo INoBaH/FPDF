@@ -1,0 +1,15 @@
+body {
+    width: auto;
+    height: auto;
+    background-color: bisque;
+}
+
+.boton {
+    font-size: x-large;
+    cursor: pointer;
+    margin-top: 1%;
+}
+#texto {
+    font-size: x-large;
+}
+
