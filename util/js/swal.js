@@ -15,7 +15,7 @@ function ejswalicono2() {
     Swal.fire({
         icon: "error",
         title: "Error",
-        text: "Usted toco un boton prohibido",
+        text: "Mensaje de error",
         footer: "<a href='../index.php'> Descubra su horoscopo</a>"
     });
 }
@@ -29,19 +29,19 @@ function ejswalmulti() {
         cancelButtonText: 'Cancelar',
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Por favor, hazle un favor a esta humanidad'
+        confirmButtonText: 'Aceptar'
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire(
-                'Ha sido sentenciado a muchos UwUs',
-                'Tu vida ha sido borrada de este mundo',
-                'success'
-            )
+            Swal.fire({
+                title: 'Exito!',
+                text: "Ha confirmado mis sospechas...",
+                icon: 'success'
+        })
         } else {
             Swal.fire({
-                title: 'True End',
+                title: 'Ha cancelado toda sospecha',
                 icon: 'error',
-                text: 'Te has salvado de los UwUs'
+             
             })
         }
     })
@@ -50,14 +50,21 @@ function ejswalmulti() {
 
 function ejswalimg() {
     texto = document.getElementById("texto").value;
+    if (texto = "") {
     Swal.fire({
-        title: 'Rico!',
+        title: 'Imagen!',
         text: 'Imagen Personalizada',
         imageUrl: texto,
         imageWidth: 400,
         imageHeight: 200,
         imageAlt: 'Custom image',
-    })
+    })} else {
+        Swal.fire({
+        title: 'Sin imagen!',
+        text: 'No se ha ingresado ninguna imagen',
+        icon: 'error'
+        })
+    }
 }
 
 function ejswalback() {
