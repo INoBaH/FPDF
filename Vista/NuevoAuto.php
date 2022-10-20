@@ -87,8 +87,7 @@
             (document.getElementById('Marca').value == '') && 
             (document.getElementById('Modelo').value == '') && 
             ((document.getElementById('Km').value == '') || (intval(document.getElementById('Km').value) >= 0)) &&
-            ((document.getElementById('Anio').value == '') || (intval(document.getElementById('Anio').value) < 1799) && 
-            (intval(document.getElementById('Anio').value) >= 2022)) &&
+            ((document.getElementById('Anio').value == '')) &&
             (document.getElementById('Archivo').value == '')){ 
             
             return mensajeError("Faltan completar datos", "Complete los campos obligatorios");
